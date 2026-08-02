@@ -1,0 +1,38 @@
+### Simple User Management API Requests
+
+@baseUrl = https://localhost:5001
+@token = techhive-secret-token
+
+### Get all users
+GET {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+
+### Get a user by id
+GET {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+
+### Create a new user
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Alice Johnson",
+  "email": "alice@example.com",
+  "department": "HR"
+}
+
+### Update an existing user
+PUT {{baseUrl}}/api/users/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Alice Updated",
+  "email": "alice.updated@example.com",
+  "department": "Engineering"
+}
+
+### Delete a user
+DELETE {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
